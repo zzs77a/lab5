@@ -1,0 +1,58 @@
+{
+    "users": [
+        {
+            "firstname": "xukun",
+            "lastname": "cai",
+            "email": "123@qq.com",
+            "dateOfBirth": "7.8",
+            "userpreferences": {
+                "theme": "lanqiu",
+                "language": "basketball",
+                "notifications": true,
+                "subscription":true
+            },
+            "address": {
+                "street": "111",
+                "city": "roman",
+                "state": "222",
+                "zipCode": "123456"
+            }
+        },
+        {
+            "firstname": "chengcheng",
+            "lastname": "fan",
+            "email": "456@qq.com",
+            "dateOfBirth": "9.9",
+            "userpreferences": {
+                "theme": "hei",
+                "language": "english",
+                "notifications": false,
+                "subscription":true
+            },
+            "address": {
+                "street": "222",
+                "city": "fance",
+                "state": "333",
+                "zipCode": "456"
+            }
+        },
+        {
+            "firstname": "ziyi",
+            "lastname": "wang",
+            "email": "789@qq.com",
+            "dateOfBirth": "12.22",
+            "userpreferences": {
+                "theme": "rap",
+                "language": "english",
+                "notifications": true,
+                "subscription":true
+            },
+            "address": {
+                "street": "333",
+                "city": "yisa",
+                "state": "444",
+                "zipCode": "789"
+            }
+        }
+    ]
+}

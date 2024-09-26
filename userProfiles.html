@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userProfiles</title>
+</head>
+
+<body>
+    <div id="profiles"> </div>
+    <script>
+        fetch('userProfiles.json')
+            .then(response => {
+                if (!response.ok)
+                    throw new Error('Fetch error: ' + response.status)
+                else
+                    return response.json();
+            })
+            .then(json => {
+                const profiles = document.getElementById('profiles');
+                json.users.forEach(user => {
+
+                    const userInfo = `
+                    <h2>${user.firstname}${user.lastname}</h2>
+                    <p>${user.email}</p>
+                    <p>${user.dateOfBirth}</p>                    
+                    <h3>address</h3>
+                    <ul>
+                     <li>${user.address.street}</li>
+                     <li>${user.address.city}</li>
+                     <li>${user.address.state}</li>
+                     <li>${user.address.zipCode}</li>
+                     </ul>
+                   <h3>preference</h3>
+                   <ul>
+                    <li>${user.userpreferences.theme}</li>
+                    <li>${user.userpreferences.language}</li>
+                    <li>${user.userpreferences.notification}</li>
+                    <li>${user.userpreferences.subscription}</li>
+                    </ul>
+                    `;
+                    profiles.innerHTML += userInfo;
+                });
+            }) // things you are going to do with the parsed json  
+            .catch(err => console.error('Fetch error: ' + err.message)); 
+    </script>
+</body>
+
+</html>
